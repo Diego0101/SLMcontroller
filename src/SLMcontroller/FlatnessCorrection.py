@@ -5,7 +5,7 @@
 __author__ = "Matteo Mazzanti"
 __copyright__ = "Copyright 2023, Matteo Mazzanti"
 __license__ = "GNU GPL v3"
-__maintainer__ = "Matteo Mazzanti"
+__maintainer__ = "D. Ayala"
 
 # -*- coding: utf-8 -*-
 
@@ -75,7 +75,7 @@ class FlatnessCorrectionTab(QWidget):
         self.image_preview_layout = QVBoxLayout()
         self.general_controls = QHBoxLayout()
         
-        self.image_path = QLineEdit("deformation_correction_pattern/CAL_LSH0802160_760nm.bmp")
+        self.image_path = QLineEdit("CAL_LSH0600651_633nm.bmp")
         self.loadimage = QPushButton("Load Flatness Correction Image")
         self.loadimage.clicked.connect(self.update_pattern)
 
