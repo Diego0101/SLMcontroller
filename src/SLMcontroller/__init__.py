@@ -5,7 +5,7 @@
 __author__ = "Matteo Mazzanti"
 __copyright__ = "Copyright 2023, Matteo Mazzanti"
 __license__ = "GNU GPL v3"
-__maintainer__ = "Matteo Mazzanti"
+__maintainer__ = "D. Ayala"
 
 # -*- coding: utf-8 -*-
 
@@ -59,7 +59,7 @@ def main():
 
     # Start GUI
     GUIapp = QtWidgets.QApplication(sys.argv)
-    GUIapp.setStyle('macos')
+    GUIapp.setStyle('GTK+')
     main = MainGUI.First(mesh_process,app, queue, eventsDict, conditionsDict)
     main.show()
     retval = GUIapp.exec()
