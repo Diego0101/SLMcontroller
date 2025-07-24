@@ -3,9 +3,9 @@
 """Phase_pattern.py: Generates phase patterns for the SLM."""
 
 __author__ = "Matteo Mazzanti"
-__copyright__ = "Copyright 2023, Matteo Mazzanti"
+__copyright__ = "Copyright 2025, Matteo Mazzanti"
 __license__ = "GNU GPL v3"
-__maintainer__ = "Matteo Mazzanti"
+__maintainer__ = "D. Ayala"
 
 # -*- coding: utf-8 -*-
 
@@ -54,7 +54,8 @@ def _generateLens(X, Y, x_offset, y_offset, wl, focus, pixel_pitch):
     mask = r < np.abs(rN/pixel_pitch)
     gamma = np.pi/(wl*focus)
     phi = gamma*(((X - x_offset)*pixel_pitch)**2+((Y - y_offset)*pixel_pitch)**2)/(2*np.pi)
-    lens = (mask*phi*255)#%256
+    #lens = (mask*phi*255)#%256
+    lens = (phi * 255)  # %256
     return lens
 
 LOOKUP_TABLE = np.array([
